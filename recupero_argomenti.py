@@ -31,7 +31,7 @@ def save_response_to_file(response, output_filename):
     print(f"Risultato salvato in '{output_filename}'.")
 
 if __name__ == "__main__":
-    genai.configure(api_key="AIzaSyCD_erV8-h5Uoa-A-rKz3_KJk8xrfO_n0Y")
+    genai.configure(api_key="YOUR_API")
     model = genai.GenerativeModel('gemini-1.5-flash')
     
     pdf_directory = "LLM_doc/"
@@ -53,3 +53,4 @@ if __name__ == "__main__":
                 if response:
                     output_filename = f"risultato_{os.path.splitext(pdf_filename)[0]}.txt"
                     save_response_to_file(response, output_filename)
+
