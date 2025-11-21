@@ -10,29 +10,26 @@
 ---
 
 ## 📖 Project Overview
-[cite_start]This project implements a specialized **Retrieval-Augmented Generation (RAG)** chatbot designed to assist students of the "Natural Language Processing and Large Language Models" course[cite: 25, 287].
+This project implements a specialized **Retrieval-Augmented Generation (RAG)** chatbot designed to assist students of the "Natural Language Processing and Large Language Models" course.
 
-[cite_start]Unlike standard chatbots, this system is strictly scoped to the course domain, utilizing a **hybrid indexing pipeline** that processes both text and images from course slides to provide accurate, context-aware answers [cite: 70-80].
+Unlike standard chatbots, this system is strictly scoped to the course domain, utilizing a **hybrid indexing pipeline** that processes both text and images from course slides to provide accurate, context-aware answers.
 
 ### 🚀 Key Features
-* [cite_start]**Domain Specificity:** Strictly focused on LLM & NLP topics; handles off-topic queries with humor[cite: 143, 162].
-* [cite_start]**Multimodal Ingestion:** Extracts text and generates AI descriptions for images/diagrams in slides (e.g., Transformer architectures), making visual data searchable[cite: 77, 203].
-* [cite_start]**Hybrid Indexing:** Combines standard semantic chunking with AI-refined chunks to improve retrieval precision [cite: 198-202].
-* [cite_start]**LLM-as-a-Judge:** Integrated automated evaluation system that benchmarks responses on Relevance, Coherence, Completeness, Clarity, and Accuracy [cite: 305-313].
+* **Domain Specificity:** Strictly focused on LLM & NLP topics; handles off-topic queries with humor.
+* **Multimodal Ingestion:** Extracts text and generates AI descriptions for images/diagrams in slides (e.g., Transformer architectures), making visual data searchable.
+* **Hybrid Indexing:** Combines standard semantic chunking with AI-refined chunks to improve retrieval precision.
+* **LLM-as-a-Judge:** Integrated automated evaluation system that benchmarks responses on Relevance, Coherence, Completeness, Clarity, and Accuracy.
 * **Desktop App Experience:** Runs as a local windowed application using `pywebview` and `gradio`.
 
 ---
 
 ## 🛠️ Architecture
-[cite_start]The system is built on a modular architecture[cite: 37]:
+The system is built on a modular architecture:
 
 1.  **Preprocessing:** PDFs are processed to extract text and caption images using **Gemini 2.0 Flash**.
-2.  [cite_start]**Embedding:** Text is converted into vectors using **BAAI/bge-large-en-v1.5**[cite: 88].
-3.  [cite_start]**Vector Store:** Vectors are stored in a local **FAISS** index for efficient similarity search[cite: 106].
-4.  [cite_start]**Generation:** **Gemini 2.0 Flash** generates answers based on retrieved context and conversation history[cite: 128].
-
-![Architecture Diagram](https://via.placeholder.com/800x400?text=Architecture+Diagram+(See+Report+Fig+1.1)) 
-[cite_start]*(Reference to Figure 1.1 in the project report [cite: 65])*
+2.  **Embedding:** Text is converted into vectors using **BAAI/bge-large-en-v1.5**.
+3.  **Vector Store:** Vectors are stored in a local **FAISS** index for efficient similarity search.
+4.  **Generation:** **Gemini 2.0 Flash** generates answers based on retrieved context and conversation history.
 
 ---
 
