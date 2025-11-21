@@ -8,9 +8,9 @@ from PIL import Image
 import io
 from google.api_core import exceptions
 import time 
-#os.environ["GOOGLE_API_KEY"] = "AIzaSyDHcad9zw3-Iv9ikVsWQTwTmzU7emMNZls"
-genai.configure(api_key="AIzaSyCAbyIZUsn8FsttmJBD_e-2omQD97GorK4")
-#AIzaSyB4buPxiB26K9CsQih-Iz-4fQGbz2wn9fs
+
+genai.configure(api_key="YOUR_API")
+
 
 ############################################TESTO###########################################
 import os
@@ -181,4 +181,5 @@ for pdf_filename in pdf_files:
                 
             except Exception as e:
                 print(f"Errore durante l'elaborazione di {pdf_filename}: {e}")
+
                 continue
