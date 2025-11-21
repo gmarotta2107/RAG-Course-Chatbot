@@ -7,7 +7,7 @@ import re
 import json
 
 import os
-os.environ["GOOGLE_API_KEY"] = "AIzaSyDV3buWftMkS1Kt46wN8B66pxfE5XqmW-4"
+os.environ["GOOGLE_API_KEY"] = "YOUR_API"
 
 
 from langchain_community.vectorstores import FAISS
@@ -22,7 +22,7 @@ import nltk
 #nltk.download()
 
 import os
-os.environ["GOOGLE_API_KEY"] = "AIzaSyDHcad9zw3-Iv9ikVsWQTwTmzU7emMNZls"
+os.environ["GOOGLE_API_KEY"] = "YOUR_API"
 
 
 
@@ -222,3 +222,4 @@ pdf_directory= "risultati/"
 
 # 1️⃣ Preprocessing del PDF singolo con AI e aggiornamento dell'indice FAISS
 vectorstore = update_faiss_index(pdf_directory, index_name)
+
